@@ -158,7 +158,7 @@ class auto_tune(plugins.Plugin):
             ret += '<tr align=left><th>Parameter</th><th>Value</th><th>Description</th></tr>\n'
 
             for p in sorted(sec):
-                if type(sec[p]) in [int, str, float, bool, Int, Float, String, Bool]:
+                if type(sec[p]) in [int, str, float, bool]:
                     cls = type(sec[p]).__name__.lower()
                     iname = "newval,%s,%s,%s" % (sec[p], p, cls)
                     ret += "<tr align=left>"
